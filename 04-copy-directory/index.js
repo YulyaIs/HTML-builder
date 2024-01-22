@@ -20,13 +20,10 @@ function copyDir () {
        }
     })
 
-    fs.readdir(pathToFile,
-       //  {withFileTypes: true},
-        (err, files) => {
+    fs.readdir(pathToFile, (err, files) => {
         if (err) throw err;
-          //  console.log(files);
+
              files.forEach(file => {
-               // console.log(file)
 
                 fs.copyFile(
                     `${pathToFile}/${file}`,
